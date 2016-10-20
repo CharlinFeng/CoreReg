@@ -16,6 +16,7 @@
 		891F1A131B5F3D170043C74A /* CoreRegTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 891F1A121B5F3D170043C74A /* CoreRegTests.m */; };
 		891F1A221B5F3D2B0043C74A /* RegExCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 891F1A1F1B5F3D2B0043C74A /* RegExCategories.m */; };
 		891F1A231B5F3D2B0043C74A /* NSString+RegExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = 891F1A211B5F3D2B0043C74A /* NSString+RegExtend.m */; };
+		89579D001DB8F165007773CF /* CoreRegItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 89579CFF1DB8F165007773CF /* CoreRegItemModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		891F1A1F1B5F3D2B0043C74A /* RegExCategories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegExCategories.m; sourceTree = "<group>"; };
 		891F1A201B5F3D2B0043C74A /* NSString+RegExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+RegExtend.h"; sourceTree = "<group>"; };
 		891F1A211B5F3D2B0043C74A /* NSString+RegExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegExtend.m"; sourceTree = "<group>"; };
+		89579CFE1DB8F165007773CF /* CoreRegItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreRegItemModel.h; sourceTree = "<group>"; };
+		89579CFF1DB8F165007773CF /* CoreRegItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreRegItemModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +135,8 @@
 				891F1A1D1B5F3D2B0043C74A /* Lib */,
 				891F1A201B5F3D2B0043C74A /* NSString+RegExtend.h */,
 				891F1A211B5F3D2B0043C74A /* NSString+RegExtend.m */,
+				89579CFE1DB8F165007773CF /* CoreRegItemModel.h */,
+				89579CFF1DB8F165007773CF /* CoreRegItemModel.m */,
 			);
 			path = CoreReg;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89579D001DB8F165007773CF /* CoreRegItemModel.m in Sources */,
 				891F19FF1B5F3D170043C74A /* ViewController.m in Sources */,
 				891F1A221B5F3D2B0043C74A /* RegExCategories.m in Sources */,
 				891F1A231B5F3D2B0043C74A /* NSString+RegExtend.m in Sources */,
@@ -448,6 +454,7 @@
 				891F1A181B5F3D170043C74A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		891F1A191B5F3D170043C74A /* Build configuration list for PBXNativeTarget "CoreRegTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +463,7 @@
 				891F1A1B1B5F3D170043C74A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

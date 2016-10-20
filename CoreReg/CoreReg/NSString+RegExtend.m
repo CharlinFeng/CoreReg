@@ -27,4 +27,35 @@
     return [self matchesWithDetails:RX(rx)];
 }
 
+
+-(NSArray <CoreRegItemModel *>*)splitToRegItemModelsBy:(NSString *)rx{
+
+    NSArray *arr_normalString =[self splitBy:rx];
+
+    NSMutableArray <CoreRegItemModel *>*arrM = [NSMutableArray array];
+    
+    [arr_normalString enumerateObjectsUsingBlock:^(NSString *each, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CoreRegItemModel *rim = [CoreRegItemModel new];
+        rim.str = each;
+        rim.range = [self rangeOfString:each];
+        [arrM addObject:rim];
+    }];
+    
+    NSArray *arr_rx = [self matchBy:rx];
+    [arr_rx enumerateObjectsUsingBlock:^(RxMatch  *rm, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CoreRegItemModel *rim = [CoreRegItemModel new];
+        rim.str = rm.value;
+        rim.range = rm.range;
+        [arrM addObject:rim];
+    }];
+    
+    [arrM sortUsingComparator:^NSComparisonResult(CoreRegItemModel *rim1, CoreRegItemModel *rim2) {
+        return rim1.range.location > rim2.range.location;
+    }];
+    
+    return arrM;
+}
+
 @end

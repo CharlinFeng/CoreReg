@@ -20,20 +20,14 @@
     
     NSString *str = @"fffdsfdsa fdslkjrewrlwjlfdsjalfuo[em_haha]jfdsalfjslf[em_kaixin]gfdhglr[em_bazimei]fdsljfler";
     
-    NSRegularExpression *re = RX(@"\\[\\w+\\]");
+    NSArray *arr = [str splitToRegItemModelsBy:@"\\[\\w+\\]"];
     
-    NSArray *arr1 = [str split:re];
-    
-    NSArray *arr2 = [str matches:re];
-    
-    NSArray *arr3 = [str matchesWithDetails:re];
-    
-//    NSLog(@"%@,%@,%@",arr1,arr2,arr3);
-    
-    [arr3 enumerateObjectsUsingBlock:^(RxMatch *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [arr enumerateObjectsUsingBlock:^(CoreRegItemModel *rim, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        NSLog(@"%@:%@",obj.value,NSStringFromRange(obj.range));
+        NSLog(@"%@:%@",rim.str, NSStringFromRange(rim.range));
+        
     }];
+    
 }
 
 @end

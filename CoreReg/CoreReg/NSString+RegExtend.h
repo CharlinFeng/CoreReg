@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RegExCategories.h"
+#import "CoreRegItemModel.h"
 
 @interface NSString (RegExtend)
 
@@ -16,5 +17,7 @@
 
 -(NSArray <NSString *>*)splitBy:(NSString *)rx;
 -(NSArray <RxMatch *>*)matchBy:(NSString *)rx;
+
+-(NSArray <CoreRegItemModel *>*)splitToRegItemModelsBy:(NSString *)rx;
 
 @end
