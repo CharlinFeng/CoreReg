@@ -7,7 +7,6 @@
 //
 
 #import "NSString+RegExtend.h"
-#import "RegExCategories.h"
 
 
 @implementation NSString (RegExtend)
@@ -18,7 +17,14 @@
     return [self isMatch:RX(@"^((13[0-9])|(17[0-9])|(147)|(15[^4,\\D])|(18[0-9]))\\d{8}$")];
 }
 
+-(NSArray <NSString *>*)splitBy:(NSString *)rx{
 
+    return [self split:RX(rx)];
+}
 
+-(NSArray <RxMatch *>*)matchBy:(NSString *)rx {
+
+    return [self matchesWithDetails:RX(rx)];
+}
 
 @end
