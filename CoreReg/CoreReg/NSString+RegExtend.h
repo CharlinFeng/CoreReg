@@ -12,7 +12,6 @@
 
 @interface NSString (RegExtend)
 
-/**  是否是手机号 */
 @property (nonatomic,assign,readonly) BOOL isMobileNO;
 
 -(NSArray <NSString *>*)splitBy:(NSString *)rx;

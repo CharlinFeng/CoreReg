@@ -12,7 +12,7 @@
 @implementation NSString (RegExtend)
 
 
-/**  是否是手机号 */
+
 -(BOOL)isMobileNO{
     return [self isMatch:RX(@"^((13[0-9])|(17[0-9])|(147)|(15[^4,\\D])|(18[0-9]))\\d{8}$")];
 }
@@ -39,6 +39,7 @@
         CoreRegItemModel *rim = [CoreRegItemModel new];
         rim.str = each;
         rim.range = [self rangeOfString:each];
+        rim.isRX = NO;
         [arrM addObject:rim];
     }];
     
@@ -48,6 +49,7 @@
         CoreRegItemModel *rim = [CoreRegItemModel new];
         rim.str = rm.value;
         rim.range = rm.range;
+        rim.isRX = YES;
         [arrM addObject:rim];
     }];
     

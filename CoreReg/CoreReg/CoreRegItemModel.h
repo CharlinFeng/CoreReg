@@ -12,6 +12,6 @@
 
 @property (nonatomic,copy) NSString *str;
 @property (nonatomic,assign) NSRange range;
-
+@property (nonatomic,assign) BOOL isRX;
 
 @end
